@@ -7,7 +7,7 @@
     <div class="sidebar">
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item menu-open">
+            <!--     <li class="nav-item menu-open">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -35,12 +35,12 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                    <a href="{{URL::to('admin/dashboard')}}" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Widgets
+                            Dashboard
                         </p>
                     </a>
                 </li>
@@ -49,10 +49,10 @@
         
         
                 <li class="nav-item">
-                    <a href="pages/calendar.html" class="nav-link">
-                        <i class="nav-icon fas fa-calendar-alt"></i>
+                    <a href="{{URL::to('admin/users')}}" class="nav-link">
+                        <i class="nav-icon fas fa-user-alt"></i>
                         <p>
-                            Calendar
+                            Users
                         </p>
                     </a>
                 </li>

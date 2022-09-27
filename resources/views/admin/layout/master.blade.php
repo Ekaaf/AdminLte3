@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="{{URL::to('public/adminlte3/css/adminlte.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.css">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
     </head>
 
     <body class="hold-transition sidebar-mini">
@@ -35,10 +37,18 @@
 
         <!-- OPTIONAL SCRIPTS -->
         <script src="{{URL::to('public/adminlte3/js/Chart.min.js')}}"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{URL::to('public/adminlte3/js/demo.js')}}"></script>
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <!-- <script src="{{URL::to('public/adminlte3/js/dashboard3.js')}}"></script> -->
+
+        <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+        <script src="//cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+        <script src="//cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+        <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+        <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+        <script src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
+
 
     @yield('script')
     </body>

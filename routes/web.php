@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,11 @@ Route::post('/admin/postlogin',[LoginController::class, 'postlogin'])->name('pos
 
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin/dashboard',[HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
+    Route::get('/admin/users',[UserController::class, 'users'])->name('users');
+    Route::post('/admin/userlist',[UserController::class, 'getAllUsers'])->name('userlist');
+    Route::get('/admin/users/edit/{id}',[UserController::class, 'editUser'])->name('edituser');
+    Route::post('/admin/users/update/{id}',[UserController::class, 'updateUser'])->name('updateUser');
+    Route::get('/admin/users/add',[UserController::class, 'addUser'])->name('addUser');
+    Route::post('/admin/users/save',[UserController::class, 'saveUser'])->name('saveUser');
 });
