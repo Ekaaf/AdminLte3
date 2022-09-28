@@ -32,4 +32,13 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/admin/users/update/{id}',[UserController::class, 'updateUser'])->name('updateUser');
     Route::get('/admin/users/add',[UserController::class, 'addUser'])->name('addUser');
     Route::post('/admin/users/save',[UserController::class, 'saveUser'])->name('saveUser');
+
+
+    Route::get('/admin/fooditems',[HomeController::class, 'foodItems'])->name('foodItems');
+    Route::post('/admin/fooditemslist',[HomeController::class, 'getAllfooditems'])->name('getAllfooditems');
+    Route::get('/admin/fooditems/add',[HomeController::class, 'addFooditems'])->name('addFooditems');
+    Route::post('/admin/fooditems/save',[HomeController::class, 'saveFooditems'])->name('saveFooditems');
+    Route::get('/admin/fooditems/edit/{id}',[HomeController::class, 'editFooditems'])->name('editFooditems');
+    Route::post('/admin/fooditems/update/{id}',[HomeController::class, 'updateFooditems'])->name('updateFooditems');
+    Route::post('/admin/fooditems/delete/{id}',[HomeController::class, 'deleteFooditems'])->name('deleteFooditems');
 });

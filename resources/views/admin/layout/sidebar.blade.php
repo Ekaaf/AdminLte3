@@ -44,15 +44,21 @@
                         </p>
                     </a>
                 </li>
-      
-          
-        
-        
+                
                 <li class="nav-item">
                     <a href="{{URL::to('admin/users')}}" class="nav-link">
                         <i class="nav-icon fas fa-user-alt"></i>
                         <p>
                             Users
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{URL::to('admin/fooditems')}}" class="nav-link">
+                        <i class="nav-icon fas fa-user-alt"></i>
+                        <p>
+                            Food Items
                         </p>
                     </a>
                 </li>
